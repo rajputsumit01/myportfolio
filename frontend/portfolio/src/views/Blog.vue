@@ -108,7 +108,7 @@ const posts = reactive([
     id: 1,
     title: 'Building a Netflix Clone UI',
     date: 'Dec 2025',
-    readTime: ,
+    readTime:5 ,
     categories: ['UI', 'Frontend'],
     excerpt: 'Recreating Netflix taught me hero banners, horizontal scrolling sections, and hover effects.',
     content:
@@ -119,7 +119,7 @@ const posts = reactive([
     id: 2,
     title: 'E-commerce Layouts with Amazon & Flipkart',
     date: 'Nov 2025',
-    readTime: ,
+    readTime: 4,
     categories: ['E-commerce', 'UI'],
     excerpt: 'Cloning Amazon & Flipkart improved my understanding of product grids and responsive structure.',
     content:
@@ -130,7 +130,7 @@ const posts = reactive([
     id: 3,
     title: 'StreetStyleStore – Fashion UI Clone',
     date: 'Oct 2025',
-    readTime: ,
+    readTime: 6,
     categories: ['Fashion', 'UI'],
     excerpt: 'A fashion UI clone focusing on imagery, spacing, and product emphasis.',
     content:
