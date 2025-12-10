@@ -15,7 +15,7 @@
             <div class="flex-1">
               <div class="flex items-center justify-between gap-4 mb-1">
                 <h2 class="text-blue-400 font-bold text-lg">Frontend Developer – StreetStyleStore</h2>
-                <div class="text-sm text-gray-300">2023 — Present</div>
+                <div class="text-sm text-gray-300"> — Present</div>
               </div>
               <p class="text-gray-300 text-sm leading-relaxed">
                 Built responsive e-commerce UI components (product cards, listings, checkout pages),
@@ -33,7 +33,7 @@
             <div class="flex-1">
               <div class="flex items-center justify-between gap-4 mb-1">
                 <h2 class="text-cyan-300 font-bold text-lg">Web Development Training – Excellence Technology</h2>
-                <div class="text-sm text-gray-300">2023</div>
+                <div class="text-sm text-gray-300">2024</div>
               </div>
               <p class="text-gray-300 text-sm leading-relaxed">
                 Completed intensive hands-on training covering HTML, CSS, Java, responsive layouts, and
