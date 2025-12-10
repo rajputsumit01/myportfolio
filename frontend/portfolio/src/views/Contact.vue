@@ -17,7 +17,7 @@
 
         <!-- Instagram -->
         <a
-          href="https://instagram.com/your-profile"
+          href="https://www.instagram.com/rajput_sumit__01/?igsh=bjFzcWh0dzd3djcz#"
           target="_blank"
           rel="noopener noreferrer"
           class="glass p-6 rounded-2xl text-center hover:scale-105 transition"
@@ -29,7 +29,7 @@
 
         <!-- Facebook -->
         <a
-          href="https://facebook.com/your-profile"
+          href="https://www.facebook.com/share/1TWMDRbr6r/"
           target="_blank"
           rel="noopener noreferrer"
           class="glass p-6 rounded-2xl text-center hover:scale-105 transition"
@@ -41,7 +41,7 @@
 
         <!-- Telegram -->
         <a
-          href="https://t.me/your-telegram-username"
+          href="t.me/r4jput_sumit"
           target="_blank"
           rel="noopener noreferrer"
           class="glass p-6 rounded-2xl text-center hover:scale-105 transition"
