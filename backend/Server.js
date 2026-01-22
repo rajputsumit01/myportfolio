@@ -8,15 +8,6 @@ const PORT = process.env.PORT || 5000;
 
 // BRANDING CONFIG
 const BRAND_NAME = "Sumit Portfolio";
-const LOGO_URL = "https://via.placeholder.com/160x40.png?text=Logo"; // replace later
-const NEON = "#00ffa5";
-
-const SOCIALS = [
-  { href: "mailto:sumitk87138@gmail.com", icon: "https://img.icons8.com/fluency/48/000000/new-post.png" },
-  { href: "https://instagram.com/your-profile", icon: "https://img.icons8.com/fluency/48/000000/instagram-new.png" },
-  { href: "https://facebook.com/your-profile", icon: "https://img.icons8.com/fluency/48/000000/facebook-new.png" },
-  { href: "https://t.me/your-telegram-username", icon: "https://img.icons8.com/fluency/48/000000/telegram-app.png" }
-];
 
 app.use(cors());
 app.use(express.json());
@@ -41,29 +32,37 @@ app.post("/send-email", async (req, res) => {
   });
 
   // ============================================
-  // FIXED, RESPONSIVE, GMAIL-SAFE EMAIL TEMPLATE
+  // PROFESSIONAL BLACK & WHITE EMAIL TEMPLATE
   // ============================================
   const html = `
-  <div style="background:#0b0f12;padding:20px;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style="margin:0;padding:0;background-color:#f5f5f5;font-family:'Segoe UI',Arial,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f5f5;">
       <tr>
-        <td align="center">
-
-          <!-- CONTAINER -->
+        <td align="center" style="padding:40px 20px;">
+          
+          <!-- MAIN CONTAINER -->
           <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" 
-                 style="background:#111820;border-radius:14px;overflow:hidden;border:1px solid #1f2a30;">
+                 style="background-color:#ffffff;border:1px solid #e0e0e0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
             
             <!-- HEADER -->
             <tr>
-              <td style="padding:20px;background:#0d141a;border-bottom:1px solid #1f2a30;">
-                <table width="100%">
+              <td style="padding:30px 40px;background-color:#000000;border-bottom:2px solid #000000;">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td style="text-align:left;">
-                      <img src="${LOGO_URL}" alt="${BRAND_NAME}" style="height:40px;">
+                    <td>
+                      <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:600;letter-spacing:1px;">
+                        ${BRAND_NAME}
+                      </h1>
                     </td>
-                    <td style="text-align:right;">
-                      <span style="background:${NEON};color:#00150f;padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;">
-                        Contact
+                    <td align="right">
+                      <span style="color:#ffffff;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:500;">
+                        Contact Form
                       </span>
                     </td>
                   </tr>
@@ -71,58 +70,77 @@ app.post("/send-email", async (req, res) => {
               </td>
             </tr>
           
-            <!-- BODY -->
+            <!-- BODY CONTENT -->
             <tr>
-              <td style="padding:28px;color:#d2e4dd;font-family:Arial, sans-serif;">
+              <td style="padding:40px;">
                 
-                <h2 style="margin:0;color:#ffffff;font-size:22px;margin-bottom:10px;">
-                  ✨ You've got a message
+                <!-- GREETING -->
+                <h2 style="margin:0 0 10px 0;color:#000000;font-size:20px;font-weight:600;">
+                  New Contact Message
                 </h2>
-                <p style="margin:0;color:#8fa3ab;margin-bottom:20px;font-size:14px;">
-                  Someone contacted you through your portfolio.
+                <p style="margin:0 0 30px 0;color:#666666;font-size:14px;line-height:1.6;">
+                  You have received a new message through your portfolio contact form.
                 </p>
 
-                <!-- INFO CARD -->
-                <table width="100%" style="background:#0c1217;padding:16px;border-radius:10px;border:1px solid #1f2a30;">
+                <!-- CONTACT INFORMATION -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0" 
+                       style="background-color:#f9f9f9;border:1px solid #e0e0e0;border-radius:4px;margin-bottom:30px;">
                   <tr>
-                    <td style="color:${NEON};font-weight:600;padding:8px 0;width:80px;">Name</td>
-                    <td style="color:#ffffff;padding:8px 0;">${escapeHtml(name)}</td>
+                    <td style="padding:20px;border-bottom:1px solid #e0e0e0;">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="width:100px;padding:0;vertical-align:top;">
+                            <strong style="color:#000000;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;">
+                              Name
+                            </strong>
+                          </td>
+                          <td style="padding:0;color:#333333;font-size:15px;line-height:1.6;">
+                            ${escapeHtml(name)}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
                   </tr>
                   <tr>
-                    <td style="color:${NEON};font-weight:600;padding:8px 0;">Email</td>
-                    <td style="color:#ffffff;padding:8px 0;">${escapeHtml(email)}</td>
+                    <td style="padding:20px;">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="width:100px;padding:0;vertical-align:top;">
+                            <strong style="color:#000000;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;">
+                              Email
+                            </strong>
+                          </td>
+                          <td style="padding:0;color:#333333;font-size:15px;line-height:1.6;">
+                            <a href="mailto:${escapeHtml(email)}" 
+                               style="color:#000000;text-decoration:underline;">
+                              ${escapeHtml(email)}
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
                   </tr>
                 </table>
 
-                <!-- MESSAGE BOX -->
-                <div style="
-                  margin-top:20px;
-                  padding:16px;
-                  border-left:4px solid ${NEON};
-                  background:#0c1217;
-                  border-radius:10px;
-                  color:#d2e4dd;
-                  font-size:14px;
-                  line-height:1.6;
-                ">
-                  <strong style="color:${NEON};font-size:15px;">Message:</strong><br>
-                  ${escapeHtml(message)}
+                <!-- MESSAGE SECTION -->
+                <div style="margin-bottom:30px;">
+                  <h3 style="margin:0 0 15px 0;color:#000000;font-size:15px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;border-bottom:2px solid #000000;padding-bottom:8px;">
+                    Message
+                  </h3>
+                  <div style="background-color:#ffffff;border:1px solid #e0e0e0;border-left:4px solid #000000;padding:20px;border-radius:4px;">
+                    <p style="margin:0;color:#333333;font-size:15px;line-height:1.8;white-space:pre-wrap;">
+                      ${escapeHtml(message).replace(/\n/g, '<br>')}
+                    </p>
+                  </div>
                 </div>
 
-                <!-- BUTTONS -->
-                <table width="100%" style="margin-top:22px;">
+                <!-- ACTION BUTTON -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td align="left">
-                      <a href="mailto:${escapeHtml(email)}" 
-                         style="background:${NEON};color:#00130f;padding:10px 20px;font-weight:700;
-                         border-radius:8px;text-decoration:none;font-size:14px;">
-                        Reply →
-                      </a>
-                    </td>
-                    <td align="right">
-                      <a href="mailto:${process.env.RECEIVER_EMAIL}"
-                         style="color:#8fa3ab;text-decoration:none;font-size:14px;">
-                        Open inbox
+                    <td align="center" style="padding-top:20px;">
+                      <a href="mailto:${escapeHtml(email)}?subject=Re: Contact from ${escapeHtml(name)}" 
+                         style="display:inline-block;background-color:#000000;color:#ffffff;padding:12px 30px;text-decoration:none;border-radius:4px;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">
+                        Reply to Message
                       </a>
                     </td>
                   </tr>
@@ -133,32 +151,33 @@ app.post("/send-email", async (req, res) => {
 
             <!-- FOOTER -->
             <tr>
-              <td style="padding:18px;background:#0d141a;text-align:center;border-top:1px solid #1f2a30;">
-                <p style="color:#8fa3ab;font-size:13px;margin:0 0 10px;">
-                  Sent from <strong style="color:#ffffff;">${BRAND_NAME}</strong>
-                </p>
-
-                <!-- SOCIAL ICONS -->
-                <div style="margin-top:10px;">
-                  ${SOCIALS.map(s => `
-                  <a href="${s.href}" style="margin:0 6px;display:inline-block;">
-                    <img src="${s.icon}" width="26" height="26" style="border-radius:6px;">
-                  </a>`).join("")}
-                </div>
-
+              <td style="padding:30px 40px;background-color:#f9f9f9;border-top:1px solid #e0e0e0;">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td align="center" style="padding-bottom:15px;">
+                      <p style="margin:0;color:#666666;font-size:12px;line-height:1.6;">
+                        This email was automatically generated from your portfolio contact form.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <p style="margin:0;color:#999999;font-size:11px;">
+                        © ${new Date().getFullYear()} ${BRAND_NAME}. All rights reserved.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 
           </table>
 
-          <p style="color:#4e5a61;font-size:12px;margin-top:12px;text-align:center;">
-            This email was generated automatically.
-          </p>
-
         </td>
       </tr>
     </table>
-  </div>
+  </body>
+  </html>
   `;
 
   const mailOptions = {

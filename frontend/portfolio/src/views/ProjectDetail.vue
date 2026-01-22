@@ -59,7 +59,7 @@
       </div>
 
       <!-- Tech Stack -->
-      <div>
+      <div class="mb-8">
         <h2 class="text-xl font-semibold text-blue-400 mb-4">Technologies Used</h2>
         <div class="flex flex-wrap gap-2">
           <span
@@ -70,6 +70,21 @@
             {{ t }}
           </span>
         </div>
+      </div>
+
+      <!-- Project Link -->
+      <div v-if="project.link" class="mt-6">
+        <a
+          :href="project.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-black font-semibold rounded-lg hover:bg-blue-400 transition-colors"
+        >
+          <span>Visit Live Project</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
 

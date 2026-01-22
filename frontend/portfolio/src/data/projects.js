@@ -54,5 +54,17 @@ export const projects = [
     fullDescription: 'A fashion-forward e-commerce platform emphasizing visual presentation and aesthetics. The design prioritizes high-quality imagery, sophisticated color palettes, and elegant spacing. Built with a focus on user experience for fashion shoppers, featuring refined product cards and intuitive navigation.',
     features: ['Fashion UI', 'Image-focused', 'Product grid', 'Elegant spacing', 'Color schemes'],
     tech: ['HTML', 'CSS', 'Tailwind', 'Vue.js']
+  },
+  {
+    id: 'romantic-proposal',
+    title: 'Romantic Proposal',
+    category: 'Clone',
+    img: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop',
+    short: 'An interactive romantic proposal website with beautiful animations.',
+    description: 'A delightful and interactive proposal website featuring smooth animations, engaging user interactions, and a heartwarming design.',
+    fullDescription: 'A creative and romantic web experience designed to create memorable moments. This project features beautiful animations, interactive elements, and a user-friendly interface that creates an emotional connection. Built with modern web technologies to deliver a smooth and engaging experience.',
+    features: ['Interactive animations', 'Smooth transitions', 'Responsive design', 'User engagement', 'Beautiful UI'],
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://romantic-proposal-mocha.vercel.app/'
   }
 ]

@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd frontend/portfolio && npm install && npm run build",
+  "outputDirectory": "frontend/portfolio/dist",
+  "installCommand": "cd frontend/portfolio && npm install",
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
