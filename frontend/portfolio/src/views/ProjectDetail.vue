@@ -1,8 +1,8 @@
 <template>
-  <div class="px-6 md:px-16 pb-10">
+  <div class="px-4 sm:px-6 md:px-16 pb-6 sm:pb-10">
 
     <!-- Project Found -->
-    <div v-if="project" class="glass mt-6 p-6 md:p-8 rounded-2xl max-w-4xl mx-auto">
+    <div v-if="project" class="glass mt-4 sm:mt-6 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl max-w-4xl mx-auto">
 
       <!-- Back Link -->
       <RouterLink
@@ -13,8 +13,8 @@
       </RouterLink>
 
       <!-- Header -->
-      <h1 class="text-4xl font-bold text-blue-400 mb-2">{{ project.title }}</h1>
-      <p class="text-xs text-gray-400 mb-6">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-400 mb-2">{{ project.title }}</h1>
+      <p class="text-xs text-gray-400 mb-4 sm:mb-6">
         Category: {{ project.category }}
       </p>
 
@@ -31,21 +31,21 @@
       </div>
 
       <!-- Short Description -->
-      <p class="text-lg text-[#F8F9FA] mb-6 leading-relaxed">
+      <p class="text-base sm:text-lg text-[#F8F9FA] mb-4 sm:mb-6 leading-relaxed">
         {{ project.description }}
       </p>
 
       <!-- Full Description -->
-      <div class="mb-8 border-l-4 border-blue-500 pl-6">
-        <h2 class="text-xl font-semibold text-blue-400 mb-2">About This Project</h2>
-        <p class="text-[#F8F9FA] leading-relaxed">
+      <div class="mb-6 sm:mb-8 border-l-4 border-blue-500 pl-4 sm:pl-6">
+        <h2 class="text-lg sm:text-xl font-semibold text-blue-400 mb-2">About This Project</h2>
+        <p class="text-sm sm:text-base text-[#F8F9FA] leading-relaxed">
           {{ project.fullDescription }}
         </p>
       </div>
 
       <!-- Features -->
-      <div v-if="project.features" class="mb-8">
-        <h2 class="text-xl font-semibold text-blue-400 mb-4">Key Features</h2>
+      <div v-if="project.features" class="mb-6 sm:mb-8">
+        <h2 class="text-lg sm:text-xl font-semibold text-blue-400 mb-3 sm:mb-4">Key Features</h2>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
           <li
             v-for="feature in project.features"
@@ -59,8 +59,8 @@
       </div>
 
       <!-- Tech Stack -->
-      <div class="mb-8">
-        <h2 class="text-xl font-semibold text-blue-400 mb-4">Technologies Used</h2>
+      <div class="mb-6 sm:mb-8">
+        <h2 class="text-lg sm:text-xl font-semibold text-blue-400 mb-3 sm:mb-4">Technologies Used</h2>
         <div class="flex flex-wrap gap-2">
           <span
             v-for="t in project.tech"
@@ -73,12 +73,12 @@
       </div>
 
       <!-- Project Link -->
-      <div v-if="project.link" class="mt-6">
+      <div v-if="project.link" class="mt-4 sm:mt-6">
         <a
           :href="project.link"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-black font-semibold rounded-lg hover:bg-blue-400 transition-colors"
+          class="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-blue-500 text-black font-semibold text-sm sm:text-base rounded-lg hover:bg-blue-400 transition-colors"
         >
           <span>Visit Live Project</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

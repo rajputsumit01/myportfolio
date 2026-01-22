@@ -1,6 +1,6 @@
 
 <template>
-  <nav class="fixed top-0 left-0 w-full bg-[#212529]/80 backdrop-blur-md flex items-center justify-between px-6 md:px-12 py-3 z-50 border-b border-blue-500/20 light:bg-white/90 light:border-gray-200/50">
+  <nav class="fixed top-0 left-0 w-full bg-[#212529]/80 backdrop-blur-md flex items-center justify-between px-4 sm:px-6 md:px-12 py-2 sm:py-3 z-50 border-b border-blue-500/20 light:bg-white/90 light:border-gray-200/50">
     <!-- Logo -->
     <div class="flex items-center gap-2">
       <div class="w-8 h-8 rounded-full border border-blue-500 flex items-center justify-center text-blue-500 light:text-blue-600 text-sm font-bold">

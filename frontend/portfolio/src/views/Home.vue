@@ -1,44 +1,44 @@
 
 <template>
-  <div class="px-6 md:px-16 space-y-16">
+  <div class="px-4 sm:px-6 md:px-16 space-y-8 sm:space-y-12 md:space-y-16">
 
     <!-- HERO -->
-    <section class=" mt-4 p-8 md:p-10 rounded-3xl flex flex-col md:flex-row items-center gap-10">
-      <div class="space-y-4 max-w-xl">
-        <h1 class="text-4xl md:text-5xl font-bold text-[#F8F9FA]">Hi, I'm Sumit 👋</h1>
-        <p class="text-lg text-blue-400 font-medium">
+    <section class="mt-2 sm:mt-4 p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-10">
+      <div class="space-y-3 sm:space-y-4 max-w-xl w-full">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F8F9FA]">Hi, I'm Sumit 👋</h1>
+        <p class="text-base sm:text-lg text-blue-400 font-medium">
           I'm a <span class="text-blue-500 font-bold">{{ currentRole }}</span>
         </p>
-        <p class="text-[#F8F9FA]">
+        <p class="text-sm sm:text-base text-[#F8F9FA]">
           I build modern, responsive front-end experiences and practice by cloning real-world websites like Netflix,
           Amazon, Flipkart and StreetStyleStore.
         </p>
-        <div class="flex flex-wrap gap-4 mt-4">
+        <div class="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4">
           <RouterLink
             to="/projects"
-            class="bg-emerald-500 text-black px-6 py-2 rounded-lg font-semibold magnetic"
+            class="bg-emerald-500 text-black px-4 sm:px-6 py-2 rounded-lg font-semibold text-sm sm:text-base magnetic text-center"
           >
             View My Work
           </RouterLink>
           <RouterLink
             to="/contact"
-            class="border border-blue-500 px-6 py-2 rounded-lg font-semibold text-blue-400 hover:bg-blue-500 hover:text-black transition"
+            class="border border-blue-500 px-4 sm:px-6 py-2 rounded-lg font-semibold text-sm sm:text-base text-blue-400 hover:bg-blue-500 hover:text-black transition text-center"
           >
             Contact Me
           </RouterLink>
-          <div class="flex gap-4">
+          <div class="flex gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
             <a
               href="/myportfolio/Resume.pdf"
               target="_blank"
               rel="noopener"
-              class="bg-emerald-500 text-black px-6 py-2 rounded-lg font-semibold hover:bg-emerald-600 transition magnetic"
+              class="bg-emerald-500 text-black px-3 sm:px-4 md:px-6 py-2 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-emerald-600 transition magnetic text-center flex-1 sm:flex-none"
             >
               View CV
             </a>
             <a
               href="/myportfolio/Resume.pdf"
               download="Sumit_Resume.pdf"
-              class="bg-blue-500 text-black px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition magnetic"
+              class="bg-blue-500 text-black px-3 sm:px-4 md:px-6 py-2 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-blue-600 transition magnetic text-center flex-1 sm:flex-none"
             >
               ↓ Download CV
             </a>
@@ -46,30 +46,29 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <div class="w-60 h-60  border border-blue-400/70 shadow-[0_0_30px_rgba(59,130,246,0.7)] flex items-center justify-center text-3xl">
-      <img src="https://i.pinimg.com/1200x/4c/fd/f7/4cfdf7af9800b97abb98ad04478e7d28.jpg" alt="" class="">
+      <div class="flex flex-col items-center w-full sm:w-auto">
+        <div class="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 border border-blue-400/70 shadow-[0_0_30px_rgba(59,130,246,0.7)] flex items-center justify-center rounded-lg overflow-hidden">
+          <img src="https://i.pinimg.com/1200x/4c/fd/f7/4cfdf7af9800b97abb98ad04478e7d28.jpg" alt="Sumit" class="w-full h-full object-cover">
         </div>
-        
       </div>
     </section>
 
     <!-- SKILLS -->
     <section class="skills-section">
-      <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA] light:text-gray-900">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA] light:text-gray-900">Skills</h2>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4">
         <div
           v-for="s in skills"
           :key="s.name"
-          class="skill-card glass rounded-xl p-4 flex flex-col items-center text-center"
+          class="skill-card glass rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 flex flex-col items-center text-center"
         >
-          <img :src="s.icon" :alt="s.name" class="w-10 h-10 mb-2" />
-          <p class="text-blue-400 light:text-blue-600 text-xs md:text-sm">{{ s.name }}</p>
+          <img :src="s.icon" :alt="s.name" class="w-8 h-8 sm:w-10 sm:h-10 mb-1 sm:mb-2" />
+          <p class="text-blue-400 light:text-blue-600 text-xs">{{ s.name }}</p>
         </div>
       </div>
 
       <!-- Skill proficiency bars -->
-      <div class="mt-8 space-y-3" ref="progressBarsContainer">
+      <div class="mt-4 sm:mt-6 md:mt-8 space-y-2 sm:space-y-3" ref="progressBarsContainer">
         <div v-for="(bar, idx) in progress" :key="bar.name">
           <div class="flex justify-between text-xs text-[#F8F9FA] light:text-gray-800 mb-1">
             <span>{{ bar.name }}</span>
@@ -88,17 +87,17 @@
 
     <!-- SOFT SKILLS -->
     <section class="soft-skills-section">
-      <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA] light:text-gray-900">Soft Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA] light:text-gray-900">Soft Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         <div
           v-for="skill in softSkills"
           :key="skill.name"
-          class="soft-skill-card glass rounded-xl p-6 flex items-center gap-4 border-l-4 border-cyan-400 light:border-cyan-500"
+          class="soft-skill-card glass rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 flex items-center gap-3 sm:gap-4 border-l-4 border-cyan-400 light:border-cyan-500"
         >
-          <img :src="skill.icon" :alt="skill.name" class="w-12 h-12 flex-shrink-0" />
-          <div class="flex-1">
-            <h3 class="text-lg font-semibold text-cyan-400 light:text-cyan-600 mb-1">{{ skill.name }}</h3>
-            <p class="text-sm text-gray-300 light:text-gray-700">{{ skill.desc }}</p>
+          <img :src="skill.icon" :alt="skill.name" class="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h3 class="text-base sm:text-lg font-semibold text-cyan-400 light:text-cyan-600 mb-1">{{ skill.name }}</h3>
+            <p class="text-xs sm:text-sm text-gray-300 light:text-gray-700">{{ skill.desc }}</p>
           </div>
         </div>
       </div>
@@ -106,17 +105,17 @@
 
     <!-- LANGUAGES -->
     <section class="languages-section">
-      <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA] light:text-gray-900">Languages</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-2xl">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA] light:text-gray-900">Languages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 max-w-2xl">
         <div
           v-for="lang in languages"
           :key="lang.name"
-          class="language-card glass rounded-xl p-6 flex items-center gap-4 border-l-4 border-green-400 light:border-green-500"
+          class="language-card glass rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 flex items-center gap-3 sm:gap-4 border-l-4 border-green-400 light:border-green-500"
         >
-          <img :src="lang.icon" :alt="lang.name" class="w-12 h-12 flex-shrink-0" />
-          <div class="flex-1">
-            <h3 class="text-lg font-semibold text-green-400 light:text-green-600 mb-1">{{ lang.name }}</h3>
-            <p class="text-sm text-gray-300 light:text-gray-700">{{ lang.level }}</p>
+          <img :src="lang.icon" :alt="lang.name" class="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h3 class="text-base sm:text-lg font-semibold text-green-400 light:text-green-600 mb-1">{{ lang.name }}</h3>
+            <p class="text-xs sm:text-sm text-gray-300 light:text-gray-700">{{ lang.level }}</p>
           </div>
         </div>
       </div>
@@ -124,23 +123,23 @@
 
     <!-- SERVICES -->
     <section>
-  <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA]">Services</h2>
+  <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA]">Services</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
     <div
       v-for="s in services"
       :key="s.title"
-      class="glass rounded-xl p-6 text-center flex flex-col items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20 transition"
+      class="glass rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 text-center flex flex-col items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20 transition"
     >
       <!-- IMAGE ICON -->
       <img
         :src="s.icon"
         alt="service icon"
-        class="w-14 h-14 object-contain mb-2"
+        class="w-12 h-12 sm:w-14 sm:h-14 object-contain mb-2"
       />
 
-      <h3 class="text-lg font-semibold text-blue-400">{{ s.title }}</h3>
-      <p class="text-sm text-[#F8F9FA]">{{ s.desc }}</p>
+      <h3 class="text-base sm:text-lg font-semibold text-blue-400">{{ s.title }}</h3>
+      <p class="text-xs sm:text-sm text-[#F8F9FA]">{{ s.desc }}</p>
     </div>
   </div>
 
@@ -156,15 +155,15 @@
 
 
     <!-- TECH STACK -->
-    <section class="tech-stack-section py-8 px-6">
-      <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA] light:text-gray-900">Tech Stack</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+    <section class="tech-stack-section py-4 sm:py-6 md:py-8 px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA] light:text-gray-900">Tech Stack</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
         <div v-for="(tech, idx) in techStack" :key="tech.name" class="tech-card group cursor-pointer">
-          <div class="tech-card-inner rounded-xl p-6 text-center flex flex-col items-center gap-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 light:border-purple-400/40 light:bg-purple-50 hover:border-purple-400/60 light:hover:border-purple-400/80 transition-all duration-300 transform hover:scale-110 hover:-rotate-3"
+          <div class="tech-card-inner rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 text-center flex flex-col items-center gap-2 sm:gap-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 light:border-purple-400/40 light:bg-purple-50 hover:border-purple-400/60 light:hover:border-purple-400/80 transition-all duration-300 transform hover:scale-105 sm:hover:scale-110 hover:-rotate-3"
             :style="{ transitionDelay: `${idx * 50}ms` }">
-            <img :src="tech.icon" :alt="tech.name" class="w-12 h-12 group-hover:animate-bounce transition-transform" />
-            <p class="text-sm font-semibold text-purple-300 light:text-purple-700">{{ tech.name }}</p>
-            <p class="text-xs text-gray-400 light:text-gray-600">{{ tech.category }}</p>
+            <img :src="tech.icon" :alt="tech.name" class="w-10 h-10 sm:w-12 sm:h-12 group-hover:animate-bounce transition-transform" />
+            <p class="text-xs sm:text-sm font-semibold text-purple-300 light:text-purple-700">{{ tech.name }}</p>
+            <p class="text-[10px] sm:text-xs text-gray-400 light:text-gray-600">{{ tech.category }}</p>
           </div>
         </div>
       </div>
@@ -172,8 +171,8 @@
 
     <!-- ACHIEVEMENTS -->
     <section>
-      <h2 class="text-3xl font-semibold mb-6 text-[#F8F9FA]">Highlights</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-[#F8F9FA]">Highlights</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-xs sm:text-sm">
         <div class="glass rounded-xl p-4 text-center">✔ Netflix UI Clone</div>
         <div class="glass rounded-xl p-4 text-center">✔ Amazon UI Clone</div>
         <div class="glass rounded-xl p-4 text-center">✔ Flipkart UI Clone</div>

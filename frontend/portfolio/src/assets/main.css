@@ -156,7 +156,7 @@
 
   /* Skills section styling */
   .skills-section {
-    @apply bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-2xl p-8 border border-blue-400/20;
+    @apply bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-blue-400/20;
   }
 
   html.light .skills-section {
@@ -165,7 +165,7 @@
 
   /* Soft Skills section styling */
   .soft-skills-section {
-    @apply bg-gradient-to-br from-cyan-500/5 to-teal-500/5 rounded-2xl p-8 border border-cyan-400/20;
+    @apply bg-gradient-to-br from-cyan-500/5 to-teal-500/5 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-cyan-400/20;
   }
 
   html.light .soft-skills-section {
@@ -187,7 +187,7 @@
 
   /* Tech stack section styling */
   .tech-stack-section {
-    @apply bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl border border-purple-400/20;
+    @apply bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-xl sm:rounded-2xl border border-purple-400/20;
   }
 
   html.light .tech-stack-section {

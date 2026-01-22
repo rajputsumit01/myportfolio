@@ -1,22 +1,22 @@
 <template>
-  <div class="px-6 md:px-16 pb-10">
+  <div class="px-4 sm:px-6 md:px-16 pb-6 sm:pb-10">
     <!-- Header Section -->
-    <section class="mt-4 mb-8 text-center md:text-left">
-      <h1 class="text-4xl font-bold mb-3 text-[#F8F9FA]">Blog & Case Studies</h1>
-      <p class="text-[#F8F9FA] max-w-2xl mx-auto md:mx-0 text-lg">
+    <section class="mt-4 mb-6 sm:mb-8 text-center md:text-left">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 text-[#F8F9FA]">Blog & Case Studies</h1>
+      <p class="text-sm sm:text-base md:text-lg text-[#F8F9FA] max-w-2xl mx-auto md:mx-0">
         Learn from my UI/UX projects, coding experiments, and real-world frontend case studies.
       </p>
     </section>
 
     <!-- Posts Grid -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
       <article
         v-for="post in posts"
         :key="post.id"
-        class="glass rounded-xl p-6 hover:scale-[1.03] transition-transform cursor-pointer shadow-lg hover:shadow-2xl flex flex-col justify-between"
+        class="glass rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 hover:scale-[1.03] transition-transform cursor-pointer shadow-lg hover:shadow-2xl flex flex-col justify-between"
       >
         <div>
-          <h2 class="text-2xl text-blue-400 font-semibold mb-1">{{ post.title }}</h2>
+          <h2 class="text-lg sm:text-xl md:text-2xl text-blue-400 font-semibold mb-1">{{ post.title }}</h2>
           <div class="flex items-center justify-between text-gray-400 text-xs mb-2">
             <span>{{ post.date }}</span>
             <span>{{ post.readTime }} min read</span>
