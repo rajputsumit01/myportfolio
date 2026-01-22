@@ -18,10 +18,13 @@
     <footer class="border-t border-blue-500/30 text-center text-[10px] sm:text-xs text-gray-400 py-3 sm:py-4 mt-6 sm:mt-10 px-4">
       © 2025 Sumit — All Rights Reserved
     </footer>
+
+    <SpeedInsights />
   </div>
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 </script>
