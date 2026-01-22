@@ -47,8 +47,82 @@
       </div>
 
       <div class="flex flex-col items-center w-full sm:w-auto">
-        <div class="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 border border-blue-400/70 shadow-[0_0_30px_rgba(59,130,246,0.7)] flex items-center justify-center rounded-lg overflow-hidden">
-          <img src="https://i.pinimg.com/1200x/4c/fd/f7/4cfdf7af9800b97abb98ad04478e7d28.jpg" alt="Sumit" class="w-full h-full object-cover">
+        <div class="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 border border-blue-400/70 shadow-[0_0_30px_rgba(59,130,246,0.7)] flex items-center justify-center rounded-lg overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 relative animate-float">
+          <!-- Animated Developer Illustration -->
+          <div class="w-full h-full flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Animated Background Circle -->
+              <circle cx="100" cy="100" r="80" fill="url(#gradient1)" opacity="0.2">
+                <animate attributeName="r" values="80;85;80" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.2;0.3;0.2" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              
+              <!-- Developer Figure -->
+              <g>
+                <!-- Head -->
+                <circle cx="100" cy="70" r="25" fill="#60a5fa" opacity="0.9">
+                  <animate attributeName="cy" values="70;72;70" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                
+                <!-- Body -->
+                <rect x="75" y="95" width="50" height="60" rx="10" fill="#3b82f6" opacity="0.9">
+                  <animate attributeName="y" values="95;97;95" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Laptop/Code Screen -->
+                <rect x="70" y="100" width="60" height="35" rx="5" fill="#1e40af" opacity="0.95">
+                  <animate attributeName="y" values="100;102;100" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Code Lines on Screen (animated typing effect) -->
+                <line x1="80" y1="110" x2="120" y2="110" stroke="#60a5fa" stroke-width="2" opacity="0.7">
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+                </line>
+                <line x1="80" y1="120" x2="110" y2="120" stroke="#60a5fa" stroke-width="2" opacity="0.7">
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+                </line>
+                <line x1="80" y1="130" x2="125" y2="130" stroke="#60a5fa" stroke-width="2" opacity="0.7">
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+                </line>
+                
+                <!-- Left Arm -->
+                <rect x="60" y="100" width="15" height="40" rx="7" fill="#3b82f6" opacity="0.9" transform-origin="67.5 120">
+                  <animate attributeName="transform" values="rotate(-20 67.5 120);rotate(-15 67.5 120);rotate(-20 67.5 120)" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Right Arm -->
+                <rect x="125" y="100" width="15" height="40" rx="7" fill="#3b82f6" opacity="0.9" transform-origin="132.5 120">
+                  <animate attributeName="transform" values="rotate(20 132.5 120);rotate(15 132.5 120);rotate(20 132.5 120)" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Floating Code Elements -->
+                <circle cx="50" cy="50" r="4" fill="#60a5fa" opacity="0.7">
+                  <animate attributeName="cy" values="50;45;50" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="150" cy="60" r="3" fill="#3b82f6" opacity="0.7">
+                  <animate attributeName="cy" values="60;55;60" dur="2.5s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <rect x="45" y="150" width="8" height="8" rx="2" fill="#60a5fa" opacity="0.7">
+                  <animate attributeName="y" values="150;145;150" dur="2.2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="155" y="140" width="6" height="6" rx="1" fill="#3b82f6" opacity="0.7">
+                  <animate attributeName="y" values="140;135;140" dur="2.8s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+                </rect>
+              </g>
+              
+              <!-- Gradient Definition -->
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
